@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+package=$1
+if [ -z $package ]; then
+    echo "sudo apt-cache search <package-name>"
+    exit 0
+fi
+sudo apt-cache search $1

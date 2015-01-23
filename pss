@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+text=$1
+if [ -z $text ]; then
+    echo "usage: pss pid|process"
+    exit
+fi
+ps aux | grep $text | grep -v grep | grep -v pss
